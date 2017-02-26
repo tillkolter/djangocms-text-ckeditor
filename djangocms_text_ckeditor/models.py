@@ -41,6 +41,7 @@ class AbstractText(CMSPlugin):
             CMSPlugin,
             related_name='%(app_label)s_%(class)s',
             parent_link=True,
+            on_delete=models.CASCADE
         )
         search_fields = ('body',)
 
